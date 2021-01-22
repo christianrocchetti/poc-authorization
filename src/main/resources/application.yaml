@@ -1,0 +1,14 @@
+server:
+  port: 8081
+
+spring:
+  security:
+    user:
+      name: admin
+      password: admin
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
