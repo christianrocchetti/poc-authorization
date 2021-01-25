@@ -1,4 +1,4 @@
-package com.github.robertomanfreda.poc.authorization.stub;
+package com.poc.authorization.stub;
 
 import java.util.ArrayList;
 import java.util.List;

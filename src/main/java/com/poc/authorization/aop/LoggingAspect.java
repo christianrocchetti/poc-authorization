@@ -1,4 +1,4 @@
-package com.github.robertomanfreda.poc.authorization.aop;
+package com.poc.authorization.aop;
 
 // TODO implement a Logging aspect that logs the following details:
 //      - requestId         (The unique IDentifier for the request)

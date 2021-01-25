@@ -1,4 +1,4 @@
-package com.github.robertomanfreda.poc.authorization.model.request;
+package com.poc.authorization.model.request;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

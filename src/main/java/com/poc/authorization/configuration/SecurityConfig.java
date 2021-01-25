@@ -1,4 +1,4 @@
-package com.github.robertomanfreda.poc.authorization.configuration;
+package com.poc.authorization.configuration;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;

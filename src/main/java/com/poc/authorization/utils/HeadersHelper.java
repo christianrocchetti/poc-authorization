@@ -1,4 +1,4 @@
-package com.github.robertomanfreda.poc.authorization.utils;
+package com.poc.authorization.utils;
 
 public class HeadersHelper {
 

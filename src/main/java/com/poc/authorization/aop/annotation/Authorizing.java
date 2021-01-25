@@ -1,4 +1,4 @@
-package com.github.robertomanfreda.poc.authorization.aop.annotation;
+package com.poc.authorization.aop.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

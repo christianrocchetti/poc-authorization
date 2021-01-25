@@ -1,7 +1,7 @@
-package com.github.robertomanfreda.poc.authorization.aop;
+package com.poc.authorization.aop;
 
-import com.github.robertomanfreda.poc.authorization.stub.Base64Stub;
-import com.github.robertomanfreda.poc.authorization.utils.HeadersHelper;
+import com.poc.authorization.stub.Base64Stub;
+import com.poc.authorization.utils.HeadersHelper;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.ProceedingJoinPoint;
@@ -15,7 +15,7 @@ import org.springframework.stereotype.Component;
 import javax.servlet.http.HttpServletRequest;
 import java.util.Optional;
 
-import static com.github.robertomanfreda.poc.authorization.utils.HeadersHelper.TokenType.BASE_64;
+import static com.poc.authorization.utils.HeadersHelper.TokenType.BASE_64;
 
 @Aspect
 @Component
@@ -25,7 +25,7 @@ public class AuthorizationAspect {
 
     private final HttpServletRequest httpServletRequest;
 
-    @Pointcut("execution(@com.github.robertomanfreda.poc.authorization.aop.annotation.Authorizing * *.*(..))")
+    @Pointcut("execution(@com.poc.authorization.aop.annotation.Authorizing * *.*(..))")
     public void authPointcut() {
         // All methods marked using @Authorizing pointcut
     }

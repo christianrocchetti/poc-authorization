@@ -1,4 +1,4 @@
-package com.github.robertomanfreda.poc.authorization.model.response;
+package com.poc.authorization.model.response;
 
 import lombok.Builder;
 import lombok.Data;

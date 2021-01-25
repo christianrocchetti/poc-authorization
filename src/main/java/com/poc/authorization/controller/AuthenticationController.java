@@ -1,8 +1,8 @@
-package com.github.robertomanfreda.poc.authorization.controller;
+package com.poc.authorization.controller;
 
-import com.github.robertomanfreda.poc.authorization.aop.annotation.Authorizing;
-import com.github.robertomanfreda.poc.authorization.model.request.LoginRequest;
-import com.github.robertomanfreda.poc.authorization.model.response.LoginResponse;
+import com.poc.authorization.aop.annotation.Authorizing;
+import com.poc.authorization.model.request.LoginRequest;
+import com.poc.authorization.model.response.LoginResponse;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
