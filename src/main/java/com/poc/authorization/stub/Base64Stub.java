@@ -3,7 +3,7 @@ package com.poc.authorization.stub;
 import java.util.ArrayList;
 import java.util.List;
 
-// TODO Replace this stub (if you want to go deeper)
+// T\ODO Replace this stub (if you want to go deeper)
 public class Base64Stub {
 
     // Base64 is composed as follows:
