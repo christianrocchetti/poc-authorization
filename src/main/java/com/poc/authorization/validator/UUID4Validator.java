@@ -1,16 +1,15 @@
 package com.poc.authorization.validator;
 
-import com.poc.authorization.validator.annotation.IsUUID4;
+import com.poc.authorization.validator.annotation.UUID4;
 
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 import java.util.regex.Pattern;
 
-public class UUID4Validator implements ConstraintValidator<IsUUID4, String> {
-
+public class UUID4Validator implements ConstraintValidator<UUID4, String> {
 
     @Override
-    public void initialize(IsUUID4 constraintAnnotation) {
+    public void initialize(UUID4 constraintAnnotation) {
 
     }
 
