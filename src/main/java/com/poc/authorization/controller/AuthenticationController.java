@@ -7,17 +7,12 @@ import lombok.Data;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.validation.BindingResult;
-import org.springframework.validation.FieldError;
-import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.validation.Valid;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Objects;
 import java.util.UUID;
 
@@ -29,27 +24,9 @@ public class AuthenticationController {
 
     @Authorizing
     @PostMapping("/login")
-    public ResponseEntity<LoginResponse> login(@RequestBody @Valid LoginRequest loginRequest,
-                                               BindingResult bindingResult) {
+    public ResponseEntity<LoginResponse> login(@RequestBody @Valid LoginRequest loginRequest) {
 
-        // TODO use this technique for every endpoints (?AOP? - ?ControllerAdvice?)
-        if (bindingResult.hasErrors()) {
-            Map<String, String> errors = new HashMap<>();
-
-            for (ObjectError error : bindingResult.getAllErrors()) {
-                String fieldError = ((FieldError) error).getField();
-                String errorMessage = error.getDefaultMessage();
-
-                errors.put(fieldError, errorMessage);
-            }
-
-            LoginResponse response = LoginResponse.builder()
-                    .httpStatus(HttpStatus.UNPROCESSABLE_ENTITY.value())
-                    .errors(errors)
-                    .build();
-
-            return new ResponseEntity<>(response, Objects.requireNonNull(HttpStatus.resolve(response.getHttpStatus())));
-        }
+        // DONE TODO use this technique for every endpoints (?AOP? - ?ControllerAdvice?)
 
         LoginResponse response = LoginResponse.builder()
                 .httpStatus(HttpStatus.OK.value())
