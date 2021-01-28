@@ -22,6 +22,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 // Disable security on /actuator/health
                 .antMatchers("/actuator/health").permitAll()
 
+                // Disable security for swagger
+                .antMatchers("/v3/api-docs/**",
+                        "/swagger-ui.html",
+                        "/swagger-ui/**").permitAll()
+
 
                 // Disable default /login - /logout
                 .antMatchers(HttpMethod.GET, "/login").permitAll()

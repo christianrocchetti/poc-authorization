@@ -3,6 +3,7 @@ package com.poc.authorization.controller;
 import com.poc.authorization.aop.annotation.Authorizing;
 import com.poc.authorization.model.request.LoginRequest;
 import com.poc.authorization.model.response.LoginResponse;
+import io.swagger.v3.oas.annotations.Operation;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -23,7 +24,8 @@ import java.util.UUID;
 public class AuthenticationController {
 
     @Authorizing
-    @PostMapping("/login")
+    @Operation(description = "")
+    @PostMapping(value = "/login", produces = "application/json")
     public ResponseEntity<LoginResponse> login(@RequestBody @Valid LoginRequest loginRequest) {
 
         // DONE TODO use this technique for every endpoints (?AOP? - ?ControllerAdvice?)

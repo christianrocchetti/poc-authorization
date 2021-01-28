@@ -22,6 +22,9 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
+
+        <springdoc-openapi-ui.version>1.4.8</springdoc-openapi-ui.version>
+
         <jackson.version>2.12.1</jackson.version>
         <validation-api.version>2.0.1.Final</validation-api.version>
         <hibernate.validator.version>6.2.0.Final</hibernate.validator.version>
@@ -30,6 +33,14 @@
     </properties>
 
     <dependencies>
+        <!-- doc openapi -->
+        <dependency>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-ui</artifactId>
+            <version>${springdoc-openapi-ui.version}</version>
+        </dependency>
+
+        <!-- spring -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
